@@ -1,7 +1,7 @@
 <!-- Description -->
 <div class="modal fade" id="description">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 5px;">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
@@ -11,7 +11,7 @@
                 <p id="desc"></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+              <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
 <!-- Add -->
 <div class="modal fade" id="addnew">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 5px;">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
@@ -65,8 +65,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Save</button>
+              <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+              <button type="submit" class="btn btn-info" name="add"><i class="fa fa-save"></i> Save</button>
               </form>
             </div>
         </div>
@@ -76,7 +76,7 @@
 <!-- Update Photo -->
 <div class="modal fade" id="edit_photo">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 5px;">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
@@ -94,8 +94,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
+              <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+              <button type="submit" class="btn btn-success" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
               </form>
             </div>
         </div>

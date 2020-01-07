@@ -45,13 +45,13 @@
 	       						if($inc == 1) echo "<div class='row'>";
 	       						echo "
 	       							<div class='col-sm-4'>
-	       								<div class='box box-solid'>
+	       								<div class='box box-solid box-success'>
 		       								<div class='box-body prod-body'>
-		       									<img src='".$image."' width='100%' height='230px' class='thumbnail'>
-		       									<h5><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h5>
+		       									<img src='".$image."' width='100%' height='230px' style='border-radius: 5px;'>
+		       									<h3><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h3>
 		       								</div>
-		       								<div class='box-footer'>
-		       									<b>Rp. ".number_format($row['price'])."</b>
+		       								<div class='box-footer bg-green'>
+		       									<h4><b>Rp. ".number_format($row['price'])."</b></h4>
 		       								</div>
 	       								</div>
 	       							</div>

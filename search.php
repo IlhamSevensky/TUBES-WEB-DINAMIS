@@ -37,7 +37,7 @@
 	       						if($inc == 1) echo "<div class='row'>";
 	       						echo "
 	       							<div class='col-sm-4'>
-	       								<div class='box box-solid'>
+	       								<div class='box box-solid box-success'>
 		       								<div class='box-body prod-body'>
 		       									<img src='".$image."' width='100%' height='230px' class='thumbnail'>
 		       									<h5><a href='product.php?product=".$row['slug']."'>".$highlighted."</a></h5>

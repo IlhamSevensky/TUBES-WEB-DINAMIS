@@ -112,7 +112,7 @@
             <div class="inner">
               <?php
                 // mengambil semua jumlah kolom dari tabel user dan nilainya disimpan sebagai numrows
-                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users");
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users ");
                 $stmt->execute();
                 $urow =  $stmt->fetch();
                 // Tampilkan jumlah users
@@ -161,7 +161,7 @@
       <!-- /.row -->
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
+          <div class="box box-success">
             <div class="box-header with-border">
               <h3 class="box-title">Monthly Sales Report</h3>
               <div class="box-tools pull-right">

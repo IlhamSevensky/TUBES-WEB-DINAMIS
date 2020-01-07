@@ -33,10 +33,10 @@
             </li>
             <li class="user-footer">
               <div class="pull-left">
-                <a href="#profile" data-toggle="modal" class="btn btn-default btn-flat" id="admin_profile">Update</a>
+                <a href="#profile" data-toggle="modal" class="btn btn-default" id="admin_profile">Update</a>
               </div>
               <div class="pull-right">
-                <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
+                <a href="../logout.php" class="btn btn-default">Sign out</a>
               </div>
             </li>
           </ul>

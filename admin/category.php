@@ -46,9 +46,9 @@
       ?>
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
+          <div class="box box-success">
             <div class="box-header with-border">
-              <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
+              <a href="#addnew" data-toggle="modal" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> New</a>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
@@ -68,8 +68,8 @@
                           <tr>
                             <td>".$row['name']."</td>
                             <td>
-                              <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit</button>
-                              <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                              <button class='btn btn-success btn-sm edit' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit</button>
+                              <button class='btn btn-danger btn-sm delete' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                             </td>
                           </tr>
                         ";

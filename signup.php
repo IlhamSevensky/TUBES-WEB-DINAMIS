@@ -6,7 +6,7 @@
 
 ?>
 <?php include 'includes/header.php'; ?>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page bg-green-gradient">
 <div class="register-box">
   	<?php
       if(isset($_SESSION['error'])){
@@ -27,8 +27,8 @@
         unset($_SESSION['success']);
       }
     ?>
-  	<div class="register-box-body">
-    	<p class="login-box-msg">Register a new membership</p>
+  	<div class="register-box-body box-no-hover" >
+    	<h2 class="login-box-msg">Register</h2>
 
     	<form action="register.php" method="POST">
           <div class="form-group has-feedback">
@@ -54,12 +54,12 @@
           <hr>
       		<div class="row">
     			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signup"><i class="fa fa-pencil"></i> Sign Up</button>
+          			<button type="submit" class="btn btn-info btn-block" name="signup"><i class="fa fa-pencil"></i> Sign Up</button>
         		</div>
       		</div>
     	</form>
       <br>
-      <a href="login.php">I already have a membership</a><br>
+      <p>Already have account?<a href="login.php"> Please login here...</a></p><br>
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
   	</div>
 </div>

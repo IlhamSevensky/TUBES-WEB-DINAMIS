@@ -43,12 +43,12 @@
 					$userid = $conn->lastInsertId();
 
 				        $_SESSION['success'] = 'Account succesfully created.';
-				        header('location: signup.php');
+				        header('location: login.php');
 
 				}
 				catch(PDOException $e){
 					$_SESSION['error'] = $e->getMessage();
-					header('location: login.php');
+					header('location: signup.php');
 				}
 
 				$pdo->close();

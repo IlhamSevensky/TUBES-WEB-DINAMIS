@@ -29,15 +29,6 @@
 ?>
 <?php include 'includes/header.php'; ?>
 <body class="hold-transition skin-blue layout-top-nav">
-<!-- <script>
-(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script> -->
 <div class="wrapper">
 
 	<?php include 'includes/navbar.php'; ?>
@@ -55,36 +46,39 @@
 	        		</div>
 		            <div class="row">
 		            	<div class="col-sm-6">
-		            		<img src="<?php echo (!empty($product['photo'])) ? 'images/'.$product['photo'] : 'images/noimage.jpg'; ?>" width="100%" class="zoom" data-magnify-src="images/large-<?php echo $product['photo']; ?>">
+		            		<img src="<?php echo (!empty($product['photo'])) ? 'images/'.$product['photo'] : 'images/noimage.jpg'; ?>" width="100%" style="border-radius: 5px;" class="zoom" data-magnify-src="images/large-<?php echo $product['photo']; ?>">
 		            		<br><br>
-		            		<form class="form-inline" id="productForm">
-		            			<div class="form-group">
-			            			<div class="input-group col-sm-5">
-			            				
-			            				<span class="input-group-btn">
-			            					<button type="button" id="minus" class="btn btn-default btn-flat btn-lg"><i class="fa fa-minus"></i></button>
-			            				</span>
-							          	<input type="text" name="quantity" id="quantity" class="form-control input-lg" value="1">
-							            <span class="input-group-btn">
-							                <button type="button" id="add" class="btn btn-default btn-flat btn-lg"><i class="fa fa-plus"></i>
-							                </button>
-							            </span>
-							            <input type="hidden" value="<?php echo $product['prodid']; ?>" name="id">
-							        </div>
-			            			<button type="submit" class="btn btn-primary btn-lg btn-flat"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-			            		</div>
-		            		</form>
+		            		
 		            	</div>
 		            	<div class="col-sm-6">
 		            		<h1 class="page-header"><?php echo $product['prodname']; ?></h1>
 		            		<h3><b>Rp. <?php echo number_format($product['price']); ?></b></h3>
 		            		<p><b>Category:</b> <a href="category.php?category=<?php echo $product['cat_slug']; ?>"><?php echo $product['catname']; ?></a></p>
+							<form class="form-inline" id="productForm">
+		            			<div class="form-group">
+			            			<div class="input-group col-sm-5">
+			            				
+			            				<span class="input-group-btn">
+			            					<button type="button" id="minus" class="btn btn-default btn-lg"><i class="fa fa-minus"></i></button>
+			            				</span>
+							          	<input type="text" name="quantity" id="quantity" class="form-control input-lg" value="1">
+							            <span class="input-group-btn">
+							                <button type="button" id="add" class="btn btn-default btn-lg"><i class="fa fa-plus"></i>
+							                </button>
+							            </span>
+							            <input type="hidden" value="<?php echo $product['prodid']; ?>" name="id">
+							        </div>
+			            			<button type="submit" class="btn btn-info btn-lg"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+			            		</div>
+		            		</form>
+							<br>
 		            		<p><b>Description:</b></p>
 		            		<p><?php echo $product['description']; ?></p>
 		            	</div>
+						
 		            </div>
 		            <br>
-				    <!-- <div class="fb-comments" data-href="http://localhost/ecommerce/product.php?product=<?php echo $slug; ?>" data-numposts="10" width="100%"></div>  -->
+				    
 	        	</div>
 	        	<div class="col-sm-3">
 	        		<?php include 'includes/sidebar.php'; ?>

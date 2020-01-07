@@ -1,7 +1,7 @@
 <!-- Add -->
 <div class="modal fade" id="profile">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 5px;">
           	<div class="modal-header">
             	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
               		<span aria-hidden="true">&times;</span></button>
@@ -54,8 +54,8 @@
                 </div>
           	</div>
           	<div class="modal-footer">
-            	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-success btn-flat" name="save"><i class="fa fa-check-square-o"></i> Save</button>
+            	<button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+            	<button type="submit" class="btn btn-success" name="save"><i class="fa fa-check-square-o"></i> Save</button>
             	</form>
           	</div>
         </div>

@@ -36,7 +36,7 @@
 	        				unset($_SESSION['success']);
 	        			}
 	        		?>
-	        		<div class="box box-solid">
+	        		<div class="box box-solid box-success">
 	        			<div class="box-body">
 	        				<div class="col-sm-3">
 	        					<img src="<?php echo (!empty($user['photo'])) ? 'images/'.$user['photo'] : 'images/profile.jpg'; ?>" width="100%">
@@ -53,7 +53,7 @@
 	        						<div class="col-sm-9">
 	        							<h4><?php echo $user['firstname'].' '.$user['lastname']; ?>
 	        								<span class="pull-right">
-	        									<a href="#edit" class="btn btn-success btn-flat btn-sm" data-toggle="modal"><i class="fa fa-edit"></i> Edit</a>
+	        									<a href="#edit" class="btn btn-success btn-sm" data-toggle="modal"><i class="fa fa-edit"></i> Edit</a>
 	        								</span>
 	        							</h4>
 	        							<h4><?php echo $user['email']; ?></h4>
@@ -65,7 +65,7 @@
 	        				</div>
 	        			</div>
 	        		</div>
-	        		<div class="box box-solid">
+	        		<div class="box box-solid box-success">
 	        			<div class="box-header with-border">
 	        				<h4 class="box-title"><i class="fa fa-calendar"></i> <b>Transaction History</b></h4>
 	        			</div>
@@ -99,7 +99,7 @@
 	        										<td>".date('M d, Y', strtotime($row['sales_date']))."</td>
 	        										<td>".$row['pay_id']."</td>
 	        										<td>Rp. ".number_format($total)."</td>
-	        										<td><button class='btn btn-sm btn-flat btn-info transact' data-id='".$row['id']."'><i class='fa fa-search'></i> View</button></td>
+	        										<td><button class='btn btn-sm btn-info transact' data-id='".$row['id']."'><i class='fa fa-search'></i> View</button></td>
 	        									</tr>
 	        								";
 	        							}

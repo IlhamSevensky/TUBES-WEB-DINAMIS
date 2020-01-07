@@ -5,8 +5,8 @@
   }
 ?>
 <?php include 'includes/header.php'; ?>
-<body class="hold-transition login-page">
-<div class="login-box">
+<body class="hold-transition login-page bg-green-gradient">
+<div class="login-box center">
   	<?php
       if(isset($_SESSION['error'])){
         echo "
@@ -25,8 +25,8 @@
         unset($_SESSION['success']);
       }
     ?>
-  	<div class="login-box-body">
-    	<p class="login-box-msg">Sign in to start your session</p>
+  	<div class="login-box-body box-no-hover">
+    	<h2 class="login-box-msg">Login</h2>
 
     	<form action="verify.php" method="POST">
       		<div class="form-group has-feedback">
@@ -39,12 +39,12 @@
           </div>
       		<div class="row">
     			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Sign In</button>
+          			<button type="submit" class="btn btn-info btn-block" name="login"><i class="fa fa-sign-in"></i>  Login</button>
         		</div>
       		</div>
     	</form>
       <br>
-      <a href="signup.php" class="text-center">Register a new membership</a><br>
+      <p>Not have account ? <a href="signup.php" class="text-center">Register here...</a></p><br>
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
   	</div>
 </div>

@@ -30,11 +30,6 @@
   	<!-- Google Font -->
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-    <!-- Paypal Express -->
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <!-- Google Recaptcha -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
@@ -93,6 +88,11 @@
     .magnify > .magnify-lens {
       width: 300px;
       height: 300px;
+    }
+
+    .box-no-hover {
+      border: 2px green solid;
+      border-radius: 10px;
     }
 
     </style>

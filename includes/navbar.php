@@ -43,7 +43,7 @@
           <div class="input-group">
               <input type="text" class="form-control" id="navbar-search-input" name="keyword" placeholder="Search for Product" required>
               <span class="input-group-btn" id="searchBtn" style="display:none;">
-                  <button type="submit" class="btn btn-default btn-flat"><i class="fa fa-search"></i> </button>
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i> </button>
               </span>
           </div>
         </form>
@@ -88,10 +88,10 @@
                     </li>
                     <li class="user-footer">
                       <div class="pull-left">
-                        <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
+                        <a href="profile.php" class="btn btn-default">Profile</a>
                       </div>
                       <div class="pull-right">
-                        <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
+                        <a href="logout.php" class="btn btn-default">Sign out</a>
                       </div>
                     </li>
                   </ul>
