@@ -3,8 +3,10 @@
   include 'includes/format.php'; 
 ?>
 <?php 
-  $today = date('Y-m-d');
-  $year = date('Y');
+  // Indonesian Time Zone
+  $timezone = time() + (60 * 60 * 7);
+  $today = gmdate('Y-m-d', $timezone);
+  $year = gmdate('Y', $timezone);
   if(isset($_GET['year'])){
     $year = $_GET['year'];
   }

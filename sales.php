@@ -3,7 +3,10 @@
 
 	if(isset($_GET['pay'])){
 		$payid = $_GET['pay'];
-		$date = date('Y-m-d');
+		// Indonesian Time Zone
+		$timezone = time() + (60 * 60 * 7);
+		$date = gmdate('Y-m-d', $timezone);
+
 
 		$conn = $pdo->open();
 

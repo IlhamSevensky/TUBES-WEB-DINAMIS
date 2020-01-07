@@ -1,6 +1,6 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-green layout-top-nav">
 <div class="wrapper">
 
 	<?php include 'includes/navbar.php'; ?>
@@ -62,9 +62,9 @@
 	       						echo "
 	       							<div class='col-sm-4'>
 	       								<div class='box box-solid box-success'>
-		       								<div class='box-body prod-body'>
-		       									<img src='".$image."' width='100%' height='230px' class='' style='border-radius: 5px;'>
-		       									<h3><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h3>
+											   <div class='box-body prod-body'>
+		       									<img src='".$image."' width='100%' height='230px' style='border-radius: 5px;'>
+		       									<h4><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h4>
 		       								</div>
 		       								<div class='box-footer bg-green'>
 		       									<h4><b>Rp. ".number_format($row['price'])."</b></h4>

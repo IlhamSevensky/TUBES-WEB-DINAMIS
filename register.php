@@ -27,7 +27,10 @@
 				header('location: signup.php');
 			}
 			else{
-				$now = date('Y-m-d');
+				// Indonesian Time Zone
+				$timezone = time() + (60 * 60 * 7);
+				$now = gmdate('Y-m-d', $timezone);
+
 				$password = password_hash($password, PASSWORD_DEFAULT);
 
 				//generate code

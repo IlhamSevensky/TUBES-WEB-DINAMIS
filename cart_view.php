@@ -1,12 +1,55 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
 <?php
+
 	$conn = $pdo->open();
-	$stmt = $conn->prepare("SELECT * FROM sales ORDER BY id DESC LIMIT 1");
+	$stmt = $conn->prepare("SELECT pay_id FROM sales");
 	$stmt->execute();
-	$data[] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	$last_sale = $data[0][0]['pay_id'];
-	print_r($last_sale);
+	$history_transaction = $stmt->fetchColumn();
+
+	$first_code = "PAY-";
+	$random_middle = "123456789";
+	$random_end = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// Generate Transaction Code
+	// middle code
+	$middle_code = substr(str_shuffle($random_middle), 0, 6);
+	// end code
+	$end_code = substr(str_shuffle($random_end), 0, 16);
+
+	$transaction_code = $first_code . $middle_code . $end_code;
+
+	// echo $transaction_code . "<br>";
+
+	if ($history_transaction > 0) {
+		// Get all transaction code
+		foreach ($stmt as $pay_id) {
+			$data[] = $pay_id['pay_id'];
+		}
+
+		// Check if transaction code is exist
+		for ($i = 0; $i < count($data); $i++) { 
+			if ($data[$i] == $transaction_code) { // Jika kode transaksi sama dengan data yang ada pada database, maka, acak kode transaksi lagi dan ulangi cek dari awal
+				// Generate Transaction Code
+				// middle code
+				$middle_code = substr(str_shuffle($random_middle), 0, 6);
+				// end code
+				$end_code = substr(str_shuffle($random_end), 0, 16);
+
+				$transaction_code = $first_code . $middle_code . $end_code;
+				$i = 0;
+			}
+		}
+	}
+
+	// echo $transaction_code;
+
+	if(isset($_SESSION['user'])){
+		// Check cart is empty or not
+		$stmt = $conn->prepare("SELECT COUNT(*) FROM cart WHERE user_id = :id");
+		$stmt->execute(['id'=>$user['id']]);
+		$cart = $stmt->fetchColumn(); // If $cart is 0, cart is empty
+	}
+
 	$pdo->close();
 
 ?>
@@ -69,8 +112,20 @@
 
 <script>
 function checkout() {
-	$pay_code = "<?php echo $last_sale + 1; ?>";
-	window.location = 'sales.php?pay='+ $pay_code;
+	$empty_cart = <?php echo $cart ?>;
+	if (confirm('Are you sure want to checkout?')) {
+		if ($empty_cart > 0) {
+			$pay_code = "<?php echo $transaction_code ?>";
+	
+			window.location = 'sales.php?pay='+ $pay_code;
+			
+		}else{
+			alert("Cart is empty");
+		}
+	} else {
+		// Do nothing!
+	}
+	
 }
 </script>
 

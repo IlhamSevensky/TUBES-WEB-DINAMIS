@@ -44,7 +44,7 @@
 	        			<button type="button" class="close"><span aria-hidden="true">&times;</span></button>
 	        			<span class="message"></span>
 	        		</div>
-		            <div class="row">
+		            <div class="row box box-solid box-success" style="padding: 40px; border-radius: 5px;">
 		            	<div class="col-sm-6">
 		            		<img src="<?php echo (!empty($product['photo'])) ? 'images/'.$product['photo'] : 'images/noimage.jpg'; ?>" width="100%" style="border-radius: 5px;" class="zoom" data-magnify-src="images/large-<?php echo $product['photo']; ?>">
 		            		<br><br>
