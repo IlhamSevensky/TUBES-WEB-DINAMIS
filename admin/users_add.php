@@ -21,13 +21,19 @@
 		else{
 			$password = password_hash($password, PASSWORD_DEFAULT);
 			$filename = $_FILES['photo']['name'];
-			$now = date('Y-m-d');
+			// Indonesian Time Zone
+			$timezone = time() + (60 * 60 * 7);
+			$now = gmdate('Y-m-d', $timezone);
+			$type_user = 0;
+			$type_admin = 1;
+			$status_active = 1;
+
 			if(!empty($filename)){
 				move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
 			}
 			try{
-				$stmt = $conn->prepare("INSERT INTO users (email, password, firstname, lastname, address, contact_info, photo, status, created_on) VALUES (:email, :password, :firstname, :lastname, :address, :contact, :photo, :status, :created_on)");
-				$stmt->execute(['email'=>$email, 'password'=>$password, 'firstname'=>$firstname, 'lastname'=>$lastname, 'address'=>$address, 'contact'=>$contact, 'photo'=>$filename, 'status'=>1, 'created_on'=>$now]);
+				$stmt = $conn->prepare("INSERT INTO users (id, email, password, type, firstname, lastname, photo , status, created_on) VALUES (null, :email, :password, :type, :firstname, :lastname, :photo, :status, :now)");
+				$stmt->execute(['email'=>$email, 'password'=>$password, 'type'=>$type_user, 'firstname'=>$firstname, 'lastname'=>$lastname, 'photo'=>$filename, 'status'=>$status_active , 'now'=>$now]);
 				$_SESSION['success'] = 'User added successfully';
 
 			}
@@ -42,6 +48,6 @@
 		$_SESSION['error'] = 'Fill up user form first';
 	}
 
-	header('location: users.php');
+	// header('location: users.php');
 
 ?>

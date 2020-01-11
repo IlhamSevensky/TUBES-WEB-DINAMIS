@@ -43,7 +43,7 @@
 
 	// echo $transaction_code;
 
-	if(isset($_SESSION['user'])){
+	if(isset($_SESSION['user'])){ // Untuk validasi checkout
 		// Check cart is empty or not
 		$stmt = $conn->prepare("SELECT COUNT(*) FROM cart WHERE user_id = :id");
 		$stmt->execute(['id'=>$user['id']]);

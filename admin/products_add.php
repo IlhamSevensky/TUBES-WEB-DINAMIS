@@ -23,7 +23,7 @@
 			if(!empty($filename)){
 				$ext = pathinfo($filename, PATHINFO_EXTENSION);
 				$new_filename = $slug.'.'.$ext;
-				move_uploaded_file($_FILES['photo']['tmp_name'],__DIR__, '../images/'.$new_filename);	
+				move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$new_filename);	
 			}
 			else{
 				$new_filename = '';
