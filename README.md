@@ -33,7 +33,7 @@
 | Role  | Email           | Password |
 | ----- | --------------- | -------- |
 | User  | tes@tes.com     | tes123   |
-| Admin | admin@admin.com | admin123 |
+| Admin | admin@admin.com | password |
 
 ### Features
 
@@ -57,4 +57,4 @@
 
 - Product Management
 
-### Copyright &copy; 2019
+### Copyright &copy; 2020
